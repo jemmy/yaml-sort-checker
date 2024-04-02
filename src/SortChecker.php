@@ -64,6 +64,7 @@ class SortChecker
 		$errors = [];
 		$lastKey = null;
 		foreach ($yamlData as $key => $value) {
+			$key = (string) $key;
 			$isSectionExcluded = false;
 			if (in_array($key, $excludedSections, true)) {
 				$isSectionExcluded = true;
